@@ -18,19 +18,19 @@
 		<c:if test="${book != null}">
 			<form name="book_form" method="post" action="update">
 		</c:if>
-		<c:if test="${book = null}">
+		<c:if test="${book == null}">
 			<form name="book_form" method="post" action="insert">
 		</c:if>
 
-		<c:if test="${book != null}">
-			<h2>Edit Book Form</h2>
+		<h2>
+			<c:if test="${book != null}">
+			Edit Book Form
 		</c:if>
 
-		<c:if test="${book = null}">
-			<h2>New Book Form</h2>
+			<c:if test="${book = null}">
+			New Book Form
 		</c:if>
-
-
+		</h2>
 
 		<p>
 			<label>Title:</label>
